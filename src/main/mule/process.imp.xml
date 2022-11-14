@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="54b4eaef-9832-47c7-ab63-0e2607bde002" >
+		<http:request-connection host="employee-zgjm2d.5sc6y6-1.usa-e2.cloudhub.io" port="80" />
+	</http:request-config>
+	<flow name="student.impFlow" doc:id="2ca6b4ef-d3a7-4f81-80e7-c10f2f3b3e61" >
+		<http:request method="GET" doc:name="Request" doc:id="7022dfd2-865e-4f84-a34f-06e4a175d12d" path="api/employee" config-ref="HTTP_Request_configuration"/>
+	</flow>
+</mule>
